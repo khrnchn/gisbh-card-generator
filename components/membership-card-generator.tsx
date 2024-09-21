@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Twitter, Download } from "lucide-react"
 import html2canvas from 'html2canvas'
+import Image from 'next/image'
 
 const themes = {
     default: 'bg-gradient-to-r from-blue-500 to-purple-500',
@@ -111,7 +112,7 @@ export default function MembershipCardGenerator() {
                 <CardContent className="p-6 space-y-4">
                     <div className="text-center font-bold text-2xl">Global Ikhwan Sdn Bhd</div>
                     <div className="flex items-center space-x-4">
-                        {image && <img src={image} alt="Member" className="w-24 h-24 rounded-full object-cover" />}
+                        {image && <Image src={image} alt="Member" className="w-24 h-24 rounded-full object-cover" />}
                         <div>
                             <div className="font-semibold text-lg">{name || 'Member Name'}</div>
                             <div>Cawangan: {cawangan ? capitalizeFirstLetter(cawangan) : 'Not selected'}</div>
@@ -119,7 +120,7 @@ export default function MembershipCardGenerator() {
                         </div>
                     </div>
                     <div className="text-xs italic text-center mt-4">
-                        "Pasar Ikhwan di Putrajaya, siapakah dia Abuya"
+                        &quot;Pasar Ikhwan di Putrajaya, siapakah dia Abuya&quot;
                     </div>
                 </CardContent>
             </Card>
