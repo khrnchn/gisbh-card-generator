@@ -71,7 +71,8 @@ export default function MembershipCardGenerator() {
 
     return (
         <div className="max-w-md mx-auto p-4 space-y-4">
-            <h1 className="text-2xl font-bold text-center">Membership Card Generator</h1>
+            <h1 className="text-2xl font-bold text-center">GISBH Membership Card Generator</h1>
+            <p className="text-center">Cipta kad keahlian GISBH anda sekarang!</p>
             <div className="space-y-2">
                 <Label htmlFor="name">Name</Label>
                 <Input id="name" value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter your name" />
